@@ -15,8 +15,14 @@ $(document).ready(function(){
   var choose_player = function() {
     if (turn_counter % 2 == 0) {
       active_player.push(player_x);
+      var player = $('#player_x')
+      player.addClass('your_turn');
+      player.append("<p> - It's your move!</p>");
     } else {
       active_player.push(player_o);
+      var player = $('#player_o')
+      player.addClass('your_turn');
+      player.append("<p> - It's your move!</p>");
     }
   };
 
@@ -27,6 +33,9 @@ $(document).ready(function(){
   var increment_turn_counter = function() {
     turn_counter++ ;
     active_player = [];
+    var last_player = $('.your_turn');
+    last_player.children("p").remove();
+    last_player.removeClass('your_turn');
   };
 
 
