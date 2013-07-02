@@ -1,3 +1,32 @@
 body {
-  background-color:gold;
+  background-color:white;
+}
+
+#board {
+  width: 350px;
+  overflow: hidden;
+  margin: 50px auto;
+  border: 1px solid black;
+}
+
+#board .tile {
+  border: 3px solid red;
+  display: block;
+  height: 100px;
+  width: 110px;
+  float:left;
+  font-size: 30px;
+  text-align: center;
+}
+
+#board .tile.active {
+  border: 3px solid yellow;
+}
+
+#board .tile.x {
+  background-color: orange;
+}
+
+#board .tile.o {
+  background-color: blue;
 }
