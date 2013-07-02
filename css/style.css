@@ -16,7 +16,6 @@ body {
   width: 350px;
   overflow: hidden;
   margin: 50px auto;
-  border: 1px solid black;
 }
 
 #board .tile {
@@ -39,4 +38,28 @@ body {
 
 #board .tile.o {
   background-color: blue;
+}
+
+#board .tile:nth-child(1),
+#board .tile:nth-child(2),
+#board .tile:nth-child(3) {
+  border-top: 3px solid white;
+}
+
+#board .tile:nth-child(1),
+#board .tile:nth-child(4),
+#board .tile:nth-child(7) {
+  border-left: 3px solid white;
+}
+
+#board .tile:nth-child(7),
+#board .tile:nth-child(8),
+#board .tile:nth-child(9) {
+  border-bottom: 3px solid white;
+}
+
+#board .tile:nth-child(3),
+#board .tile:nth-child(6),
+#board .tile:nth-child(9) {
+  border-right: 3px solid white;
 }
